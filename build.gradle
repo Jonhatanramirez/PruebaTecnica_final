@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.webjars.npm:chromedriver:2.35.0'
+    implementation 'pl.oakfusion:chromedriver:2.9'
+    implementation 'org.seleniumhq.selenium:selenium-server:3.141.59'
+
+
+    testCompileOnly  'junit:junit:4.13.2'
+    compile 'org.junit.platform:junit-platform-commons:1.8.1'
+    testCompile 'org.junit.platform:junit-platform-engine:1.8.1'
+    testCompile 'junit:junit:4.13.2'  // Or whatever version
+
+
+
+
+
+
+}
+test {
+    useJUnitPlatform()
+}
+
+ext {
+    jdkVersion = "8"
+}
